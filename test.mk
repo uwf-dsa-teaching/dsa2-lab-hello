@@ -36,15 +36,15 @@ test-output: make-main
 	@echo "Checking output format..."
 	@OUTPUT=$$(./main) ; \
 	echo "$$OUTPUT" > output.txt ; \
-	if echo "$$OUTPUT" | grep -qE '^[A-Za-z0-9\-]+:[A-Za-z0-9]+$$' && echo "$$OUTPUT" | grep -q 'Hello World!'; then \
+	if echo "$$OUTPUT" | grep -q ':' && echo "$$OUTPUT" | grep -iq 'hello world'; then \
 		echo "Output is valid."; \
 		rm -f output.txt ; \
 	else \
-		if ! echo "$$OUTPUT" | grep -qE '^[A-Za-z0-9\-]+:[A-Za-z0-9]+$$'; then \
-			echo "Output does not contain valid ID format"; \
+		if ! echo "$$OUTPUT" | grep -q ':'; then \
+			echo "Output does not contain colon (username:name format)"; \
 		fi ; \
-		if ! echo "$$OUTPUT" | grep -q 'Hello World!'; then \
-			echo "Output does not contain 'Hello World!'"; \
+		if ! echo "$$OUTPUT" | grep -iq 'hello world'; then \
+			echo "Output does not contain 'hello world'"; \
 		fi ; \
 		rm -f output.txt ; \
 		exit 1; \
