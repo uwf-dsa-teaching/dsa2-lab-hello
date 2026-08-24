@@ -7,7 +7,7 @@ create and submit a simple application for practice.
 ## Create a directory for this course
 Somewhere on your system, create a directory that you intend to use for this
 course if you have not done so already. It is nice to have one place to look
-for all of your work. Giving it an obvious name such as **cop3530** will make
+for all of your work. Giving it an obvious name such as **cop4534** will make
 it easier to find. You make create a subdirectory like **projects** and
 **labs** for better organization of course related contents.
 
