@@ -1,0 +1,25 @@
+# Executables & Binaries
+main
+test-*
+test[0-9]*
+*.exe
+*.out
+*.app
+
+# Object files & Precompiled headers
+*.o
+*.gch
+*.pch
+*.dSYM/
+
+# Coverage & Debug logs
+*.gc*
+core
+output.txt
+
+# OS & IDE Metadata
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
